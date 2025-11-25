@@ -6,9 +6,6 @@ import { WebsocketProvider } from 'y-websocket'
 import * as Y from 'yjs'
 import './style.css'
 
-const WS_SERVER_URL = import.meta.env.VITE_WS_SERVER_URL || 'ws://localhost:8080';
-
-// Generate a random user color for collaboration cursors
 function getRandomColor() {
     const colors = [
         '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
@@ -46,7 +43,7 @@ function connectToRoom(roomName) {
     }
     
     // Create new provider for the room
-    provider = new WebsocketProvider(WS_SERVER_URL, roomName, ydoc)
+    provider = new WebsocketProvider(__VITE_WS_SERVER_URL__, roomName, ydoc)
     
     return provider
 }
