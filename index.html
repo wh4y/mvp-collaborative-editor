@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collaborative Editor MVP</title>
+    <title>Imba 2000</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Collaborative Editor MVP</h1>
+            <h1>Imba 2000</h1>
+            <div class="room-controls">
+                <input type="text" id="room-input" placeholder="Enter room name" />
+                <button id="join-room-btn">Join Room</button>
+            </div>
             <div class="status">
+                <span id="current-room">Room: <strong id="room-name">default</strong></span>
                 <span id="connection-status" class="status-indicator offline">Disconnected</span>
                 <span id="user-count">Users: 1</span>
             </div>
