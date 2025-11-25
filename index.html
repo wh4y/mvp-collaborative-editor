@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Editor MVP</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Collaborative Editor MVP</h1>
+            <div class="status">
+                <span id="connection-status" class="status-indicator offline">Disconnected</span>
+                <span id="user-count">Users: 1</span>
+            </div>
+        </header>
+        
+        <main>
+            <div class="editor-container">
+                <div id="editor" class="editor"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Open this page in multiple tabs or browsers to test real-time collaboration</p>
+        </footer>
+    </div>
+    
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

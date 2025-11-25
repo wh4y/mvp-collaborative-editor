@@ -1,0 +1,30 @@
+{
+  "name": "collaborative-editor-mvp",
+  "version": "1.0.0",
+  "description": "Lightweight collaborative editor MVP using TipTap and Yjs",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server.js",
+    "start": "concurrently \"npm run server\" \"npm run dev\""
+  },
+  "keywords": ["collaborative", "editor", "tiptap", "yjs", "websocket"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tiptap/core": "^2.1.13",
+    "@tiptap/extension-collaboration": "^2.1.13",
+    "@tiptap/extension-collaboration-cursor": "^2.1.13",
+    "@tiptap/starter-kit": "^2.1.13",
+    "ws": "^8.14.2",
+    "y-websocket": "^1.5.0",
+    "yjs": "^13.6.8"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "vite": "^5.0.0"
+  }
+}
