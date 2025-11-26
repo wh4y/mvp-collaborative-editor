@@ -85,7 +85,7 @@ wss.on('connection', (ws, req) => {
   
   // Extract document name from URL (optional, defaults to 'default')
   const url = new URL(req.url || '/', `http://${req.headers.host}`)
-  const docName = url.searchParams.get('room') || 'collaborative-document'
+  const docName = url.pathname.split('/').pop() || 'default'
   
   console.log(`User ${connectionId} connected to room "${docName}"`)
   
